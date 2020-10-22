@@ -24,9 +24,6 @@ public class Usuario {
     private String segundoNombre;
 
     @Column
-    private String nombreCompleto;
-
-    @Column
     private String apellidoPaterno;
 
     @Column
@@ -50,12 +47,11 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String dni, String nombre, String primerNombre, String segundoNombre, String nombreCompleto, String apellidoPaterno, String apellidoMaterno, String email, Integer vigencia, Integer sexo, String password, Date fechaCese) {
+    public Usuario(String dni, String nombre, String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String email, Integer vigencia, Integer sexo, String password, Date fechaCese) {
         this.dni = dni;
         this.nombre = nombre;
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
-        this.nombreCompleto = nombreCompleto;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.email = email;
@@ -106,11 +102,10 @@ public class Usuario {
     }
 
     public String getNombreCompleto() {
-        return nombreCompleto;
-    }
-
-    public void setNombreCompleto(String nombreCompleto) {
-        this.nombreCompleto = nombreCompleto;
+        StringBuilder nombreCompleto = new StringBuilder();
+        nombreCompleto.append(primerNombre).append(" ").append(segundoNombre).append(" ").append(apellidoPaterno)
+                .append("").append(apellidoMaterno);
+        return nombreCompleto.toString();
     }
 
     public String getApellidoPaterno() {

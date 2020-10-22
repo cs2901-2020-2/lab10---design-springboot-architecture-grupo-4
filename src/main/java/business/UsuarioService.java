@@ -5,6 +5,7 @@ import data.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.lang.reflect.AccessibleObject;
 
 import java.util.List;
 import java.util.Optional;
@@ -42,13 +43,16 @@ public class UsuarioService {
 
     public Usuario updatePresentUser(Usuario fromUsuario, Usuario toUsuario) {
         Field[] fromFields = fromUsuario.getClass().getDeclaredFields();
+        for(Field field:fromFields) field.setAccessible(true);
         Field[] toFields = toUsuario.getClass().getDeclaredFields();
+        for(Field field:toFields) field.setAccessible(true);
         if (fromFields != null && toFields != null) {
             for (Field toField : toFields) {
                 try {
                     Field fromField = fromUsuario.getClass().getDeclaredField(toField.getName());
-                    if (fromField != null) {
-                        toField.set(toField, fromField);
+                    for(Field field:fromFields) field.setAccessible(true);
+                    if (fromField != null && fromField.get(fromUsuario) != null) {
+                        toField.set(toUsuario, fromField);
                     }
                 } catch (Exception e) {
                      e.printStackTrace();

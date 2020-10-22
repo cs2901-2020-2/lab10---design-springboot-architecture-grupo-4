@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="639.8567567585203" y="1266.9879227791569">org.springframework.boot.web.servlet.support.SpringBootServletInitializer.WebEnvironmentPropertySourceInitializer</node>
+    <node x="143.86904761904762" y="494.0">business.UsuarioService</node>
+    <node x="1115.8567567585203" y="1278.4879227791569">utec.lab10.lab10grupo4.ServiceApplication</node>
+    <node x="0.0" y="368.0">data.repositories.UsuarioRepository</node>
+    <node x="604.3567567585203" y="963.9879227791569">org.springframework.boot.web.servlet.support.SpringBootServletInitializer</node>
+    <node x="287.8567567585203" y="1267.4879227791569">org.springframework.boot.web.servlet.support.SpringBootServletInitializer.SpringBootContextLoaderListener</node>
+    <node x="744.3567567585203" y="859.9879227791569">org.springframework.web.WebApplicationInitializer</node>
+    <node x="259.3928571428571" y="753.0">controller.UsuarioController</node>
+    <node x="321.5357142857143" y="0.0">data.entities.Usuario</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="controller.UsuarioController" target="data.entities.Usuario">
+      <point x="73.5" y="-93.5" />
+      <point x="479.8928571428571" y="728.0" />
+      <point x="492.3690476190476" y="728.0" />
+      <point x="492.3690476190476" y="343.0" />
+      <point x="475.70238095238096" y="343.0" />
+      <point x="61.666666666666686" y="159.0" />
+    </edge>
+    <edge source="business.UsuarioService" target="data.repositories.UsuarioRepository">
+      <point x="-84.5" y="-104.5" />
+      <point x="228.36904761904762" y="469.0" />
+      <point x="202.0" y="469.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="data.repositories.UsuarioRepository" target="data.entities.Usuario">
+      <point x="0.0" y="-38.0" />
+      <point x="202.0" y="343.0" />
+      <point x="352.3690476190476" y="343.0" />
+      <point x="-61.666666666666686" y="159.0" />
+    </edge>
+    <edge source="controller.UsuarioController" target="business.UsuarioService">
+      <point x="-73.5" y="-93.5" />
+      <point x="332.8928571428571" y="728.0" />
+      <point x="312.8690476190476" y="728.0" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="utec.lab10.lab10grupo4.ServiceApplication" target="org.springframework.boot.web.servlet.support.SpringBootServletInitializer">
+      <point x="0.0" y="-38.5" />
+      <point x="922.5" y="1367.0" />
+      <point x="755.6666666666667" y="1367.0" />
+      <point x="175.66666666666663" y="126.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.support.SpringBootServletInitializer.SpringBootContextLoaderListener" target="org.springframework.boot.web.servlet.support.SpringBootServletInitializer">
+      <point x="0.0" y="-49.5" />
+      <point x="166.0" y="1367.0" />
+      <point x="404.3333333333334" y="1367.0" />
+      <point x="-175.66666666666663" y="126.5" />
+    </edge>
+    <edge source="business.UsuarioService" target="data.entities.Usuario">
+      <point x="84.5" y="-104.5" />
+      <point x="397.3690476190476" y="469.0" />
+      <point x="414.5" y="469.0" />
+      <point x="0.0" y="159.0" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.support.SpringBootServletInitializer" target="org.springframework.web.WebApplicationInitializer">
+      <point x="0.0" y="-126.5" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.support.SpringBootServletInitializer.WebEnvironmentPropertySourceInitializer" target="org.springframework.boot.web.servlet.support.SpringBootServletInitializer">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="126.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6079412620729467" x="724.0104079375592" y="1184.0076911218475" />
+  <SelectedNodes>
+    <node>org.springframework.boot.web.servlet.support.SpringBootServletInitializer.WebEnvironmentPropertySourceInitializer</node>
+    <node>utec.lab10.lab10grupo4.ServiceApplication</node>
+    <node>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</node>
+    <node>org.springframework.boot.web.servlet.support.SpringBootServletInitializer.SpringBootContextLoaderListener</node>
+    <node>org.springframework.web.WebApplicationInitializer</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
